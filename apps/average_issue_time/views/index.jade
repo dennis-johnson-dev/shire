@@ -1,0 +1,18 @@
+extends layout
+block content
+ 
+  block form
+  form(method='post', action='/')
+
+    label(for='user') User:
+    input#user(type='text', name='user', placeholder='username')
+
+    label(for='repo') Repo:
+    input#user(type='text', name='repo', placeholder='repository name')
+
+    input#submit(type="submit", value="Submit") 
+
+  h1= title
+  p User: #{user}
+  p Repo: #{repo}
+  p The average amount of days between opened and closed issues is #{test} days.
